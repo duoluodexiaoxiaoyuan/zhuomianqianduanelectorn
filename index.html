@@ -5,9 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- 在这里引入的js文件也是预加载 -->
     <script src="./renderer.js"></script>
   </head>
   <body>
     <h1>第一个桌面开发软件</h1>
+    <input type="text" />
+    <a href="b.html">点击跳转</a>
+    <a href="b.html" target="_self">点击跳转</a>
+    <a href="b.html" target="_blank">点击跳转</a>
+    <button id="openNew">打开新页面</button>
+    <script>
+      const btn = document.querySelector("#openNew");
+      btn.addEventListener("click", () => {
+        window.open("b.html", "_self");
+      });
+    </script>
   </body>
 </html>
